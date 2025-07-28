@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@source "../node_modules/flowbite";
+@custom-variant dark (&:where(.dark, .dark *));
+@utility container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+@theme {
+  --color-main: #0aad0a;
+  --color-light: #f0f3f2 ;
+  --color-rating: #ffc908 ;
+}
