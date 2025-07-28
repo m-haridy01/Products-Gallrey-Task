@@ -44,6 +44,10 @@ export default function Cart() {
     }, 700);
   }, []);
 
+  useEffect(() => {
+    document.title= 'Cart'
+  }, [])
+
   const skeletons = Array.from({ length: 3 });
 
   return (

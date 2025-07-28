@@ -42,6 +42,11 @@ export default function Home() {
   }
 
   useEffect(() => {
+    document.title= 'Home'
+  }, [])
+  
+
+  useEffect(() => {
     if (searchWord?.trim()) {
       const filtered = products?.filter((product) =>
         product.title.toLowerCase().includes(searchWord.toLowerCase())

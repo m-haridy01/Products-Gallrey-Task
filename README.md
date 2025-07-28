@@ -1,12 +1,53 @@
-# React + Vite
+# 🛍️ Products Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and clean products gallery web application built with React and Tailwind CSS. Users can browse a list of products with light/dark theme toggle functionality.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Project Overview
 
-## Expanding the ESLint configuration
+This project is a frontend-only application that displays a grid of product cards. It allows users to:
+- View a responsive product layout
+- Toggle between light and dark themes
+- Enjoy smooth UI transitions and modern design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Screenshots
+
+| Light Mode | Dark Mode |
+|------------|-----------|
+| ![Light Mode](./screenshots/light) | ![Dark Mode](./screenshots/dark) |
+
+
+---
+
+## 🧱 Tech Stack Used
+
+- ⚛️ React (Vite)
+- 🎨 Tailwind CSS
+- 🌗 Dark/Light Theme Toggle (Context API)
+- 🗂️ File structure with reusable components
+- 📦 Deployed on Vercel
+
+---
+
+## 📁 Folder Structure
+
+src/
+│
+├── Components/
+│ ├── ProductCard.jsx
+│ └── ThemeToggle.jsx
+│
+├── Contexts/
+│ └── ThemeContextProvider.jsx
+│
+├── Pages/
+│ └── Products.jsx
+│
+├── App.jsx
+└── main.jsx
+
+
+

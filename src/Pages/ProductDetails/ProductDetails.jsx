@@ -2,6 +2,7 @@ import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
+import { useEffect } from "react";
 export default function ProductDetails() {
   let { id } = useParams();
   const navigate = useNavigate();
@@ -37,8 +38,9 @@ export default function ProductDetails() {
     queryFn: () => GetSingleProducts(),
   });
 
-  console.log(data?.data);
-
+useEffect(() => {
+    document.title= 'Product Details'
+  }, [])
   return (
     <div className="mt-25">
       <div className="flex min-h-screen items-center justify-center p-5">

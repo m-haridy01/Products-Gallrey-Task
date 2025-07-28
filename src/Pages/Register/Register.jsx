@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { object, string } from "yup";
@@ -6,11 +6,11 @@ import axios from "axios";
 
 export default function Register() {
   let navigate = useNavigate();
-let usersList = [];
-if (localStorage.getItem("usersList")) {
-  const parsedList = JSON.parse(localStorage.getItem("usersList"));
-  usersList = Array.isArray(parsedList) ? parsedList : [];
-}
+  let usersList = [];
+  if (localStorage.getItem("usersList")) {
+    const parsedList = JSON.parse(localStorage.getItem("usersList"));
+    usersList = Array.isArray(parsedList) ? parsedList : [];
+  }
 
   const passwordRegex = /^[A-Z][a-z0-9]{5,}$/;
 
@@ -51,6 +51,10 @@ if (localStorage.getItem("usersList")) {
       console.log(error);
     }
   }
+
+  useEffect(() => {
+    document.title = "Register";
+  }, []);
 
   return (
     <div className="h-screen fixed top-0 left-0 bottom-0 right-0 z-[60]  bg-white dark:bg-gray-950 flex justify-center items-center w-full">
@@ -130,10 +134,12 @@ if (localStorage.getItem("usersList")) {
               </p>
             )}
           </div>
-          <button type="submit" className="mt-4 w-full cursor-pointer bg-gradient-to-tr from-blue-600 to-indigo-600 text-indigo-100 py-2 rounded-md text-lg tracking-wide">
+          <button
+            type="submit"
+            className="mt-4 w-full cursor-pointer bg-gradient-to-tr from-blue-600 to-indigo-600 text-indigo-100 py-2 rounded-md text-lg tracking-wide"
+          >
             Register & Login
           </button>
-          
         </div>
       </form>
     </div>
