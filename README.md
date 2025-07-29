@@ -19,6 +19,9 @@ This project is a frontend-only application that displays a grid of product card
 |------------|-----------|
 | ![Light Mode](./screenshots/light) | ![Dark Mode](./screenshots/dark) |
 
+---
+
+## Live Demo:** [ https://products-gallrey-task.vercel.app/ ]
 
 ---
 
@@ -29,6 +32,8 @@ This project is a frontend-only application that displays a grid of product card
 - 🌗 Dark/Light Theme Toggle (Context API)
 - 🗂️ File structure with reusable components
 - 📦 Deployed on Vercel
+
+
 
 ---
 
