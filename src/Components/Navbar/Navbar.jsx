@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { HandleThemeContext } from "../../../../Contexts/ThemeContextProvider";
+import { HandleThemeContext } from "../../../Contexts/ThemeContextProvider";
 import { LogOut, MoonIcon, ShoppingCart, SunIcon } from "lucide-react";
 export default function Navbar() {
   let { theme, toggleTheme } = useContext(HandleThemeContext);
@@ -17,7 +17,6 @@ export default function Navbar() {
         <div className="flex items-center gap-10">
           {/* Cart */}
           <Link to="/cart" className="relative">
-            
             <ShoppingCart size={25} className="cursor-pointer text-main" />
           </Link>
 
@@ -31,7 +30,7 @@ export default function Navbar() {
           </span>
 
           {/* LogOut */}
-          <Link to={'/register'}>
+          <Link to={"/register"}>
             <LogOut className="cursor-pointer text-main" />
           </Link>
         </div>

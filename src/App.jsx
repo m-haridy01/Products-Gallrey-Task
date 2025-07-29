@@ -5,7 +5,7 @@ import Home from "./Pages/Home/Home";
 import Products from "./Pages/Products/Products";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import NotFound from "./Pages/NotFound/NotFound";
-import { HandleThemeContext } from "../../Contexts/ThemeContextProvider";
+import { HandleThemeContext } from "../Contexts/ThemeContextProvider";
 import Cart from "./Pages/Cart/Cart";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Register from "./Pages/Register/Register";
